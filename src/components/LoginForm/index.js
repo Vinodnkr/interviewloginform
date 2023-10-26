@@ -1,22 +1,35 @@
 // LoginForm.js
 import React, { useState } from "react";
 
-import { Link } from "react-router-dom"; 
+import { Link, useHistory} from "react-router-dom"; 
 import "./index.css";
 
 const LoginForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("test@test.com");
+  const [password, setPassword] = useState("test");
+
+  const history = useHistory();
 
   const handleLogin = () => {
     const user = JSON.parse(localStorage.getItem("user"));
     if (user && user.email === email && user.password === password) {
       alert("Login successful");
+      history.replace('/home')
     } else {
       alert("Login failed");
     }
-    //history.replace('/home')
+    
   };
+
+  React.useEffect(() => {
+    const fakeUser = {
+      email: "test@test.com",
+      password: "test",
+    };
+    localStorage.setItem("user", JSON.stringify(fakeUser));
+  }, []);
+
+
 
   return (
     <div className="login-form">

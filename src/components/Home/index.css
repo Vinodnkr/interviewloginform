@@ -5,12 +5,14 @@
   max-width: 700px;
   margin: 0 auto;
   padding: 20px;
+  text-align: center;
 }
 
 /* Style the header */
 .image-upload-header {
   font-size: 24px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Style the form input fields and buttons */

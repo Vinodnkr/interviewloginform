@@ -1,8 +1,6 @@
-// ImageUpload.js
 import React, { useState } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import './index.css'
-
+import './index.css';
 
 function Home() {
   const [images, setImages] = useState([]);
