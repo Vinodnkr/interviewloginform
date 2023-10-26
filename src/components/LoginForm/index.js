@@ -15,6 +15,7 @@ const LoginForm = () => {
     } else {
       alert("Login failed");
     }
+    //history.replace('/home')
   };
 
   return (
